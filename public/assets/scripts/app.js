@@ -145,3 +145,28 @@ const dados = {
     }
   ]
 };
+const container = document.querySelector('.cards-container');
+
+fetch("http://localhost:3000/noticias")
+  .then(response => response.json())
+  .then(noticias => {
+    noticias.forEach(noticia => {
+      const card = document.createElement('div');
+      card.className = 'col';
+      card.innerHTML = `
+        <div class="card">
+          <img src="${noticia.imagem_pincipal}" alt="${noticia.titulo}">
+          <div class="card-body">
+            <h3 class="card-title">${noticia.titulo}</h3>
+            <p class="card-text">${noticia.descricao}</p>
+            <button onclick="verDetalhes(${noticia.id})">Ver Mais</button>
+          </div>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  });
+
+function verDetalhes(id) {
+  window.location.href = `detalhes.html?id=${id}`;
+}

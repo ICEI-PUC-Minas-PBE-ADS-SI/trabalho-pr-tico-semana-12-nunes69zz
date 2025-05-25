@@ -1,21 +1,27 @@
 {
-  "usuarios": [
+  "noticias": [
     {
-      "id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
-      "login": "admin",
-      "senha": "123",
-      "nome": "Administrador do Sistema",
-      "email": "admin@abc.com"
+      "id": 1,
+      "titulo": "Ansiedade na adolescência",
+      "descricao": "Como lidar com a ansiedade durante a adolescência.",
+      "imagem_pincipal": "img/ansiedade1.jpg",
+      "conteudo": "Texto completo da notícia...",
+      "imagens_complementares": [
+        {
+          "src": "img/ansiedade1_1.jpg",
+          "descricao": "Adolescente sentado no chão, cabeça baixa"
+        }
+      ]
     },
     {
-      "id": "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e",
-      "login": "user",
-      "senha": "123",
-      "nome": "Usuario Comum",
-      "email": "user@abc.com"
-    },
-    {
-      "id": "AHNewTn"
+      "titulo": "nunes",
+      "conteudo": "nunes",
+      "autor": "nunes",
+      "data": "2000-03-31",
+      "categoria": "nunes",
+      "imagem_pincipal": "https://gru.ifsp.edu.br/images/phocagallery/galeria2/image03_grd.png",
+      "imagens_complementares": [],
+      "id": 2
     }
   ]
 }
