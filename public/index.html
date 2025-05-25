@@ -22,6 +22,7 @@
                     <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
                     <button class="btn btn-primary" type="submit">Buscar</button>
                 </form>
+                <a href="criar.html" class="btn btn-success ms-2">Adicionar Notícia</a>
             </div>
         </div>
     </header>
@@ -104,7 +105,31 @@
             const noticiasContainer = document.querySelector('.row');
             noticiasContainer.innerHTML = '';
 
+            // Carrega notícias salvas no localStorage
+            let noticiasSalvas = [];
+            if (localStorage.getItem('noticiasExtras')) {
+                noticiasSalvas = JSON.parse(localStorage.getItem('noticiasExtras'));
+            }
+
+            // Renderiza as notícias do objeto dados (existentes)
             dados.noticias.forEach((noticia) => {
+                const card = `
+                    <div class="col">
+                        <div class="card">
+                            <img src="${noticia.imagem_pincipal}" class="card-img-top" alt="${noticia.titulo}">
+                            <div class="card-body">
+                                <h5 class="card-title">${noticia.titulo}</h5>
+                                <p class="card-text">${noticia.descricao}</p>
+                                <a href="detalhes.html?id=${noticia.id}" class="btn btn-primary">Leia mais</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                noticiasContainer.innerHTML += card;
+            });
+
+            // Renderiza as notícias criadas pelo usuário
+            noticiasSalvas.forEach((noticia) => {
                 const card = `
                     <div class="col">
                         <div class="card">
