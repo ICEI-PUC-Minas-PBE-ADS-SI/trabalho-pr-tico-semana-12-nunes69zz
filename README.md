@@ -5,9 +5,9 @@ Nesta atividade, você irá completar o projeto anterior permitindo cadastrar e 
 
 ## Informações do trabalho
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
+- Nome: Pedro Nunes Cruz
+- Matricula: 890508
+- Proposta de projeto escolhida: Portal de notícias
 - Breve descrição sobre seu projeto:
 
 **Print do testes da API com Postman ou similar**
@@ -18,7 +18,7 @@ Nesta atividade, você irá completar o projeto anterior permitindo cadastrar e 
 
 **Print da aba NETWORK com requisições Fetch/XHR de POST**
 
-<<  COLOQUE A IMAGEM AQUI >>
+![alt text](<teste do fetch.jpg>)
 
 ## **Orientações Gerais**
 
