@@ -105,13 +105,11 @@
             const noticiasContainer = document.querySelector('.row');
             noticiasContainer.innerHTML = '';
 
-            // Carrega notícias salvas no localStorage
             let noticiasSalvas = [];
             if (localStorage.getItem('noticiasExtras')) {
                 noticiasSalvas = JSON.parse(localStorage.getItem('noticiasExtras'));
             }
 
-            // Renderiza as notícias do objeto dados (existentes)
             dados.noticias.forEach((noticia) => {
                 const card = `
                     <div class="col">
@@ -128,7 +126,6 @@
                 noticiasContainer.innerHTML += card;
             });
 
-            // Renderiza as notícias criadas pelo usuário
             noticiasSalvas.forEach((noticia) => {
                 const card = `
                     <div class="col">
